@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-controller="ctrlComboBox" ng-app="myApp">
+    <div>COMBOBOX DOBLE</div>
+    <select ng-model="vlCmb1" ng-change="cambiarCombo1(vlCmb1)">
+        <option ng-repeat="cmb1 in combobox" value="{{cmb1.llave}}">{{cmb1.llave}}</option>
+    </select>
+    <hr>
+    <select ng-model="vlCmb2">
+        <option ng-repeat="cmb2 in encontrarListaDeCombo(vlCmb1)" value="{{cmb2}}">{{cmb2}}</option>
+    </select>
+</body>
+<script defer type="text/javascript" src="libs/angular-1.8.2/angular.js"></script>
+<script defer type="text/javascript" src="js/angular.js"></script>
+</html>
